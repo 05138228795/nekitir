@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>درس اول: ساختار HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Vazirmatn', sans-serif; background: #f4f7f6; padding: 40px; line-height: 1.6; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        h1 { color: #2d3436; border-bottom: 2px solid #38bdf8; padding-bottom: 10px; }
+        .explanation { background: #eef2ff; padding: 15px; border-right: 5px solid #38bdf8; margin-bottom: 20px; }
+        pre { background: #2d3436; color: #fab1a0; padding: 20px; border-radius: 10px; overflow-x: auto; position: relative; }
+        code { font-family: 'Consolas', monospace; }
+        .copy-btn {
+            position: absolute; top: 10px; right: 10px;
+            background: #38bdf8; border: none; color: white;
+            padding: 5px 10px; border-radius: 5px; cursor: pointer;
+        }
+        .back-link { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #38bdf8; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="../index.html" class="back-link">← بازگشت به لیست درس‌ها</a>
+        <h1>درس اول: ساختار اصلی HTML</h1>
+        
+        <div class="explanation">
+            <strong>توضیح استاد:</strong><br>
+            هر صفحه وب با تگ <code>&lt;html&gt;</code> شروع می‌شود. تگ <code>&lt;head&gt;</code> اطلاعات مخفی است و <code>&lt;body&gt;</code> چیزی است که کاربر می‌بیند.
+            حتماً کد زیر را کپی کرده و در فایل خود امتحان کنید!
+        </div>
+
+        <h3>کد تمرینی:</h3>
+        <pre><button class="copy-btn" onclick="copyCode()">کپی کد</button><code id="codeBlock">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;اولین صفحه من&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;سلام دنیا!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <script>
+        function copyCode() {
+            const code = document.getElementById('codeBlock').innerText;
+            navigator.clipboard.writeText(code);
+            alert('کد کپی شد! حالا در ویرایشگر خود پیست کنید.');
+        }
+    </script>
+</body>
+</html>
