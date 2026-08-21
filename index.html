@@ -12,4 +12,118 @@
      <h2>nekit.ir.</h2>
 </body>
 </html> -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آکادمی آموزش کدنویسی | گام به گام</title>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --accent: #38bdf8;
+            --text: #f8fafc;
+        }
+
+        body {
+            background-color: var(--main-bg);
+            color: var(--text);
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 { font-size: 2.5rem; color: var(--accent); }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+            padding-bottom: 50px;
+        }
+
+        .lesson-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+        }
+
+        .lesson-number {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .lesson-title {
+            display: block;
+            font-size: 1.4rem;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .status {
+            font-size: 0.8rem;
+            background: rgba(56, 189, 248, 0.2);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🚀 آکادمی برنامه‌نویسی</h1>
+        <p>مسیر گام‌به‌گام شما از صفر تا قهرمانی در HTML & CSS</p>
+    </header>
+
+    <div class="course-list">
+        <!-- درس اول -->
+        <a href="lessons/lesson1.html" class="lesson-card">
+            <span class="lesson-number">درس اول</span>
+            <span class="lesson-title">ساختار HTML</span>
+            <span class="status">آماده یادگیری</span>
+        </a>
+
+        <!-- درس دوم -->
+        <a href="lessons/lesson2.html" class="lesson-card">
+            <span class="lesson-number">درس دوم</span>
+            <span class="lesson-title">استایل با CSS</span>
+            <span class="status">آماده یادگیری</span>
+        </a>
+
+        <!-- درس سوم (مثال برای درس‌های آینده) -->
+        <a href="#" class="lesson-card" style="opacity: 0.5; cursor: not-allowed;">
+            <span class="lesson-number">درس سوم</span>
+            <span class="lesson-title">طراحی واکنش‌گرا</span>
+            <span class="status">قفل شده 🔒</span>
+        </a>
+    </div>
+
+</body>
+</html>
 
